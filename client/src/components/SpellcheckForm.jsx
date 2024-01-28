@@ -13,6 +13,7 @@ const SpellcheckForm = ({ onResultsUpdate }) => {
 
     // Propagar los resultados al componente padre
     onResultsUpdate(spellingResults);
+    setWord("")
   };
 
   return (
@@ -21,7 +22,7 @@ const SpellcheckForm = ({ onResultsUpdate }) => {
         type="text"
         value={word}
         onChange={(e) => setWord(e.target.value)}
-        placeholder="Enter a word"
+        placeholder="Enter a word..."
       />
       <button type="submit">Submit</button>
     </form>
