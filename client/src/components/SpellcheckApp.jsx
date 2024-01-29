@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import SpellcheckForm from './SpellcheckForm';
 import SpellcheckResults from './SpellcheckResults';
+import '../App.css'; // Importar el archivo CSS
 
 const SpellcheckApp = () => {
   const [results, setResults] = useState({ correct: null, suggestions: [] });
@@ -21,6 +22,7 @@ const SpellcheckApp = () => {
 
   return (
     <div>
+      <h1>Spellchecker App</h1>
       {/* Componente de formulario */}
       <SpellcheckForm onResultsUpdate={handleResultsUpdate} />
 
