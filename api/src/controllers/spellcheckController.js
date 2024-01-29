@@ -1,26 +1,18 @@
 const fs = require('fs');
-const dictionaryPath = '../dictionary.txt';
-
-const isWordCorrect = (word) => {
-  // Implement the logic to check if the word is correct
-  // (based on the provided criteria and the dictionary)
-  // Return true if correct, false otherwise.
-};
-
-const getSpellingSuggestions = (word) => {
-  // Implement the logic to get spelling suggestions
-  // based on the provided dictionary.
-  // Return an array of suggestions.
-};
+const spellCheckService = require('../services/spellCheckService');
+//const dictionaryPath = '../dictionary.txt';
 
 const spellCheck = (req, res) => {
-  const word = req.params.word.toLowerCase();
-  const dictionary = fs.readFileSync(dictionaryPath, 'utf-8').split('\n');
-
-  if (isWordCorrect(word, dictionary)) {
+  const word = req.params.word;
+  //const dictionary = fs.readFileSync(dictionaryPath, 'utf-8').split('\n');
+  const result = spellCheckService.correct(word)
+  if (typeof result == "string"){
+    res.status(404).json({suggestions: ["No suggestions, please try again!"], correct: false })
+  }
+  if (result.length === 0) {
     res.status(200).json({ suggestions: [], correct: true });
   } else {
-    const suggestions = getSpellingSuggestions(word, dictionary);
+    const suggestions = result;
     res.status(200).json({ suggestions, correct: false });
   }
 };
