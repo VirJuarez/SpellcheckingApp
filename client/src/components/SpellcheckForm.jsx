@@ -1,6 +1,7 @@
 // SpellcheckForm.js
 import React, { useState } from 'react';
 import { checkSpelling } from '../actions/actions';
+import '../App.css'; // Importar el archivo CSS
 
 const SpellcheckForm = ({ onResultsUpdate }) => {
   const [word, setWord] = useState('');

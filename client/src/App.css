@@ -1,42 +1,119 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+/* SpellcheckForm.css */
+
+/* Centrar el formulario en la pantalla */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  height: auto;
+/* Esto centra el formulario verticalmente en toda la altura de la ventana */
+}
+
+/* Estilo del input */
+input {
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+/* Estilo del botón */
+button {
+  padding: 10px 20px;
+  background-color: #4caf50; /* Color del botón */
+  color: grey;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra del botón */
+  transition: background-color 0.3s ease; /* Transición suave al cambiar el color de fondo */
+
+  /* Pseudo-clases para dar interactividad */
+  &:hover {
+    background-color: #45a049; /* Color del botón al pasar el ratón por encima */
+    color:white;
+  }
+
+  &:active {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+     /* Cambiar sombra cuando se presiona el botón */
+  }
+}
+
+/* SpellcheckApp.css */
+
+/* Centrar el componente en la pantalla */
+div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-align: center;
+  max-height: 100vh;
+  width: 100%;
+  padding: 20px;
+  //height: 60vh; /* Esto centra el formulario verticalmente en toda la altura de la ventana */
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* Estilo adicional para el componente */
+/*div {
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}*/
+
+/* Estilo del título */
+h1 {
+  color: #333;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Estilo del fondo del componente */
+body {
+  background-color: #f4f4f4; /* Color de fondo */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+/* SpellcheckResults.css */
+
+/* Estilo del modal de fondo oscuro de superposición */
+.modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  max-height:100vh;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro de superposición */
 }
 
-.card {
-  padding: 2em;
+/* Estilo del contenido del modal */
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 45%;
+  height: 25%;
+  position:fixed;
+  bottom:20vh;
 }
 
-.read-the-docs {
-  color: #888;
+/* Estilo del botón de cierre */
+.close {
+  position:absolute;
+  top:0px;
+  right:10px;
+  font-size: 24px;
+  cursor: pointer;
+  color: red;
 }
+
+.close:hover {
+  color: #000;
+}
+
+
+
