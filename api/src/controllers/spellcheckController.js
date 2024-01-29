@@ -1,5 +1,5 @@
 const fs = require('fs');
-const spellCheckService = require('../services/spellCheckService');
+const spellCheckService = require('../services/spellcheckService');
 //const dictionaryPath = '../dictionary.txt';
 
 const spellCheck = (req, res) => {

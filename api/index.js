@@ -1,11 +1,13 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const spellcheckRouter = require('./routers/spellcheckRouter');
+const spellcheckRouter = require('./src/routers/spellcheckRouter.js');
+const cors = require('cors');
 
 const app = express();
 const port = 31337;
 
 app.use(bodyParser.json());
+app.use(cors({ origin: 'http://localhost:5173' }));
 app.use('/spellcheck', spellcheckRouter);
 
 app.listen(port, () => {
