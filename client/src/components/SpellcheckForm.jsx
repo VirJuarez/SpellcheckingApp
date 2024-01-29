@@ -14,6 +14,7 @@ const SpellcheckForm = ({ onResultsUpdate }) => {
 
     // Propagar los resultados al componente padre
     onResultsUpdate(spellingResults);
+    setWord("");
   };
 
   return (
