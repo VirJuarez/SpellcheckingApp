@@ -1,6 +1,5 @@
-/* SpellcheckForm.css */
+//////* SpellcheckForm.css *//////
 
-/* Centrar el formulario en la pantalla */
 form {
   display: flex;
   flex-direction: column;
@@ -8,42 +7,36 @@ form {
   justify-content: center;
   padding: 20px;
   height: auto;
-/* Esto centra el formulario verticalmente en toda la altura de la ventana */
 }
 
-/* Estilo del input */
 input {
   padding: 10px;
   margin-bottom: 10px;
   font-size: 16px;
 }
 
-/* Estilo del botón */
 button {
   padding: 10px 20px;
-  background-color: #4caf50; /* Color del botón */
+  background-color: #4caf50; 
   color: grey;
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra del botón */
-  transition: background-color 0.3s ease; /* Transición suave al cambiar el color de fondo */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  transition: background-color 0.3s ease;
 
-  /* Pseudo-clases para dar interactividad */
   &:hover {
-    background-color: #45a049; /* Color del botón al pasar el ratón por encima */
+    background-color: #45a049; 
     color:white;
   }
 
   &:active {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-     /* Cambiar sombra cuando se presiona el botón */
   }
 }
 
-/* SpellcheckApp.css */
+//////* SpellcheckApp.css *//////
 
-/* Centrar el componente en la pantalla */
 div {
   display: flex;
   flex-direction: column;
@@ -53,30 +46,18 @@ div {
   max-height: 100vh;
   width: 100%;
   padding: 20px;
-
 }
 
-/* Estilo adicional para el componente */
-/*div {
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-}*/
-
-/* Estilo del título */
 h1 {
   color: #333;
 }
 
-/* Estilo del fondo del componente */
 body {
-  background-color: #f4f4f4; /* Color de fondo */
+  background-color: #f4f4f4; 
 }
 
-/* SpellcheckResults.css */
+//////* SpellcheckResults.css *//////
 
-/* Estilo del modal de fondo oscuro de superposición */
 .modal {
   display: flex;
   align-items: center;
@@ -85,10 +66,9 @@ body {
   max-height:100vh;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro de superposición */
+  background-color: rgba(0, 0, 0, 0.5); 
 }
 
-/* Estilo del contenido del modal */
 .modal-content {
   background-color: #fff;
   padding: 20px;
@@ -101,7 +81,6 @@ body {
   bottom:20vh;
 }
 
-/* Estilo del botón de cierre */
 .close {
   position:absolute;
   top:0px;
