@@ -10,6 +10,13 @@ app.use(bodyParser.json());
 app.use(cors({ origin: 'http://localhost:5173' }));
 app.use('/spellcheck', spellcheckRouter);
 
+// app.use((err, req, res) => {
+//   const status = err.status || 500;
+//   const message = err.message || err;
+//   console.error(err);
+//   res.status(status).send(message);
+// });
+
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });

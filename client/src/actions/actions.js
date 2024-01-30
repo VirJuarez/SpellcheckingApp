@@ -6,6 +6,11 @@ export const checkSpelling = async (word) => {
     const response = await axios.get(`http://localhost:31337/spellcheck/${word}`);
     return response.data;
   } catch (error) {
-    return { correct: false, suggestions: "Sorry, your word couldn't be processed correctly." };
+    if (error.response && error.response.status === 404) {
+      return { correct: false, suggestions: "No suggestions, please try again!" };
+    } else {
+      return { correct: false, suggestions: "Sorry, your word couldn't be processed correctly." };
+    }
   }
 };
+
