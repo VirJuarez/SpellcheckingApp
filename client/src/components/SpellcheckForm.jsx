@@ -1,19 +1,19 @@
-// SpellcheckForm.js
 import React, { useState } from 'react';
 import { checkSpelling } from '../actions/actions';
-import '../App.css'; // Importar el archivo CSS
+import '../App.css'; 
+
 
 const SpellcheckForm = ({ onResultsUpdate }) => {
   const [word, setWord] = useState('');
 
+
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    // Llamar a la función checkSpelling desde actions.js con Axios
+    // Call the checkSpelling function from actions.js 
     const spellingResults = await checkSpelling(word);
-
-    // Propagar los resultados al componente padre
+    // Propagate the results to the parent component
     onResultsUpdate(spellingResults);
+    // Clean the input value after submission
     setWord("");
   };
 

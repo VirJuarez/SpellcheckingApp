@@ -1,6 +1,7 @@
-// SpellcheckResults.js
 import React from 'react';
-import '../App.css'; // Importar el archivo CSS
+import '../App.css'; 
+
+//Modal - it shows the result of the request: correct / suggestions
 
 const SpellcheckResults = ({ correct, suggestions, onClose }) => (
   <div className="modal">
