@@ -1,4 +1,5 @@
-//////* SpellcheckForm.css *//////
+/* SpellcheckForm.css */
+
 
 form {
   display: flex;
@@ -9,11 +10,13 @@ form {
   height: auto;
 }
 
+
 input {
   padding: 10px;
   margin-bottom: 10px;
   font-size: 16px;
 }
+
 
 button {
   padding: 10px 20px;
@@ -23,7 +26,8 @@ button {
   border-radius: 4px;
   cursor: pointer;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease; 
+
 
   &:hover {
     background-color: #45a049; 
@@ -35,7 +39,8 @@ button {
   }
 }
 
-//////* SpellcheckApp.css *//////
+/* SpellcheckApp.css */
+
 
 div {
   display: flex;
@@ -46,17 +51,21 @@ div {
   max-height: 100vh;
   width: 100%;
   padding: 20px;
+  
 }
+
 
 h1 {
   color: #333;
 }
 
+
 body {
   background-color: #f4f4f4; 
 }
 
-//////* SpellcheckResults.css *//////
+/* SpellcheckResults.css */
+
 
 .modal {
   display: flex;
@@ -68,6 +77,7 @@ body {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5); 
 }
+
 
 .modal-content {
   background-color: #fff;
@@ -81,6 +91,7 @@ body {
   bottom:20vh;
 }
 
+
 .close {
   position:absolute;
   top:0px;
@@ -93,6 +104,3 @@ body {
 .close:hover {
   color: #000;
 }
-
-
-
