@@ -13,9 +13,6 @@ RUN npm install
 # Copy the rest of the application files to the working directory
 COPY . .
 
-# Build the Vite application for production
-RUN npm run build
-
 # Expose the port the app will run on
 EXPOSE 5173
 

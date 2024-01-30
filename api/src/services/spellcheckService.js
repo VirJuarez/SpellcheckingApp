@@ -17,7 +17,7 @@ function train(features) {
     return model;
 }
 
-const content = fs.readFileSync('../dictionary.txt', 'utf-8');
+const content = fs.readFileSync(filePath, 'utf-8');
 const NWORDS = train(words(content));
 
 

@@ -11,7 +11,7 @@ const spellCheck = (req, res) => {
     } 
     //Word is incorrect - no suggestion found
     else if (result === false){
-      res.status(404).json({suggestions: ["No suggestions, please try again!"], correct: false })
+      res.status(200).json({suggestions: "No suggestions, please try again!", correct: false })
     }
     //Word is incorrect - suggestions found
     else {

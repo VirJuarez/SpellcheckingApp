@@ -8,7 +8,7 @@ const SpellcheckResults = ({ correct, suggestions, onClose }) => (
     <div className="modal-content">
       <span className="close" onClick={onClose}>&times;</span>
       <p>Correct: {correct?.toString()}</p>
-      {!correct && <p>Suggestions: {suggestions.join(', ')}</p>}
+      {!correct && <p>Suggestions: {typeof suggestions === "string" ? suggestions :suggestions.join(', ')}</p>}
     </div>
   </div>
 );
