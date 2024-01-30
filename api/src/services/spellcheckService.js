@@ -1,4 +1,7 @@
 const fs = require('fs');
+const path = require('path');
+const filePath = path.join(__dirname, '../dictionary.txt');
+
 
 // Function to split a text into lowercase words
 function words(text) {
@@ -35,7 +38,7 @@ function train(features) {
 }
 
 // Read the content of the 'dictionary.txt' file and train the model
-const content = fs.readFileSync('../dictionary.txt', 'utf-8');
+const content = fs.readFileSync(filePath, 'utf-8');
 const NWORDS = train(words(content));
 
 // Define the alphabet
