@@ -1,7 +1,6 @@
 const fs = require('fs');
 const spellCheckService = require('../services/spellcheckService');
 
-
 const spellCheck = (req, res) => {
   try {
     const word = req.params.word;

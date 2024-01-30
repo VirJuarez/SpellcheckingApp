@@ -1,4 +1,7 @@
 const fs = require('fs');
+const path = require('path');
+const filePath = path.join(__dirname, '../dictionary.txt');
+
 
 ////* Read the content of the 'dictionary.txt' file and train the model *////
 
@@ -65,6 +68,7 @@ function limitRepeatingCharacters(word) {
     const modifiedWord = word.replace(regex, '$1$1');
     return modifiedWord;
 }
+
 
 ////*Auxiliary functions to find suggestions*////
 

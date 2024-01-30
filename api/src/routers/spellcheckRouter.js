@@ -1,5 +1,5 @@
 const express = require('express');
-const spellcheckController = require('../controllers/spellcheckController');
+const spellcheckController = require('../controllers/spellcheckController.js');
 
 const router = express.Router();
 
