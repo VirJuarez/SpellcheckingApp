@@ -68,7 +68,8 @@ Ensure that you have the required ports available on your system to avoid confli
 ```
 2. Install dependencies and start the frontend:
 ```bash
-   cd client
+   npm install
+   npm run dev
 ```
 3. Open another terminal and navigate to the api directory:
  ```bash
